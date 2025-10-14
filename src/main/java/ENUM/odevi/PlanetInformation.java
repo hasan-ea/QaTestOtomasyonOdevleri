@@ -1,4 +1,4 @@
-package ders.on.ENUM.odevi;
+package ENUM.odevi;
 
 public class PlanetInformation {
     public static void main(String[] args) {

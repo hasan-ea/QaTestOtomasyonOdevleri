@@ -1,4 +1,4 @@
-package ders.on.ENUM.odevi;
+package ENUM.odevi;
 
 public enum Gezegen {
 
