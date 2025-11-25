@@ -12,23 +12,23 @@ public class Generic<T> {
     }
 
     public void printValue() {
-        Class <?> clazz = obj.getClass();
-        if (clazz == String.class) {
+        Class <?> klas = obj.getClass();
+        if (klas == String.class) {
             System.out.println(obj + " Stirg bir değerdir");
         }
-        else if (clazz == Integer.class) {
+        else if (klas == Integer.class) {
             System.out.println(obj + " Integer bir değerdir");
         }
-        else if (clazz == Double.class) {
+        else if (klas == Double.class) {
             System.out.println(obj + " Double bir değerdir");
         }
-        else if (clazz == Float.class) {
+        else if (klas == Float.class) {
             System.out.println(obj + " Float bir değerdir");
         }
-        else if (clazz == Boolean.class) {
+        else if (klas == Boolean.class) {
             System.out.println(obj + " Boolean bir değerdir");
         }
-        else if (clazz == Object.class) {
+        else if (klas == Object.class) {
             System.out.println(obj + " Genel bir değerdir");
         }
     }
