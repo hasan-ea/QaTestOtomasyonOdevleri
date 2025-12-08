@@ -1,0 +1,7 @@
+<suite name="PrimTestSuite">
+    <test name="PrimHesabiBvaTestSet">
+        <classes>
+            <class name="testng.ders18.odevi.MuhasabeTest"/>
+        </classes>
+    </test>
+</suite>
