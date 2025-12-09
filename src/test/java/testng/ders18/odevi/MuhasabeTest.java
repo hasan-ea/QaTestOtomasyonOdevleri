@@ -9,7 +9,7 @@ public class MuhasabeTest {
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("\n=== SUITE BAŞLIYOR ===\n");
+        System.out.println("\n--- SUITE BAŞLIYOR ---\n");
     }
 
     @BeforeTest
@@ -76,15 +76,14 @@ public class MuhasabeTest {
     @Test(dataProvider = "bvaData")
     public void testHesapla(int day, int expectedMaas, boolean expectedSuccess) {
 
-        System.out.println("Beklenen Maas: " + expectedMaas +
-                " | Beklenen Başarı: " + expectedSuccess);
+        System.out.println("Beklenen Maas: " + expectedMaas + " | Beklenen Başarı: " + expectedSuccess);
 
         // ================= NEGATIF TESTLER =================
         if (!expectedSuccess) {
 
-            // 1) GEÇERSİZ GİRİŞ → EXCEPTION BEKLENİR
+            // 1) GEÇERSİZ GİRİŞ ,EXCEPTION BEKLENİR
             if (day < 0 || day > 31) {
-                System.out.println("Geçersiz giriş → exception bekleniyor");
+                System.out.println("Geçersiz giriş => exception bekleniyor");
 
                 try {
                     PrimHesabi.hesapla(day);
@@ -96,7 +95,7 @@ public class MuhasabeTest {
                 return; // negatif test tamamlandı
             }
 
-            // 2) GEÇERLİ GİRİŞ AMA YANLIŞ EXPECTED VERİLDİ → eşleşmemeli
+            // 2) GEÇERLİ GİRİŞ AMA YANLIŞ EXPECTED VERİLDİ
             int actual = PrimHesabi.hesapla(day);
 
             if (actual == expectedMaas) {
@@ -110,9 +109,9 @@ public class MuhasabeTest {
         // ================= POZITIF TESTLER =================
         int actual = PrimHesabi.hesapla(day);
 
-        Assert.assertEquals(actual, expectedMaas, "Pozitif test FAILED → hesaplanan maaş beklenenle eşleşmiyor!");
+        Assert.assertEquals(actual, expectedMaas, "Pozitif test FAILED => hesaplanan maaş beklenenle eşleşmiyor!");
 
-        System.out.println("Pozitif Test PASS → Actual Maas: " + actual);
+        System.out.println("Pozitif Test PASS => Actual Maas: " + actual);
     }
 
 
@@ -136,7 +135,7 @@ public class MuhasabeTest {
 
     @AfterSuite
     public void afterSuite() {
-        System.out.println("=== SUITE BİTTİ ===\n");
+        System.out.println("--- SUITE BİTTİ ---\n");
     }
 
 

@@ -4,4 +4,11 @@
             <class name="testng.ders18.odevi.MuhasabeTest"/>
         </classes>
     </test>
+
+    <test name="PrimHesabi_NoDataProvider_TestSet">
+        <classes>
+            <class name="testng.ders18.odevi.NoDataProvider"/>
+        </classes>
+    </test>
+
 </suite>
